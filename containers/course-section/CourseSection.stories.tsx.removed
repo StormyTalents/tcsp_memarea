@@ -1,0 +1,22 @@
+import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+
+import { CourseSection } from "./CourseSection";
+import { testCourses } from "../../utils/constants";
+
+export default {
+  title: "CSP Components/CourseSection",
+  component: CourseSection,
+} as ComponentMeta<typeof CourseSection>;
+
+const Template: ComponentStory<typeof CourseSection> = (args) => (
+  <CourseSection {...args} />
+);
+
+export const Primary = Template.bind({});
+
+Primary.args = {
+  title: "Primary CourseSection",
+  number: 1,
+  courses: testCourses,
+};
